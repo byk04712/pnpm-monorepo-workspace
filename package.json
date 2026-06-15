@@ -1,35 +1,55 @@
 {
   "name": "pnpm-monorepo-workspace",
+  "type": "module",
   "version": "1.0.0",
   "description": "A template design by pnpm + monorepo + framework template.",
-  "main": "index.js",
-  "scripts": {
-    "lint:es": "eslint packages/core/index.ts",
-    "spellcheck": "cspell lint --dot --gitignore --color --cache --show-suggestions \"**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md)\"",
-    "lint:style": "stylelint --fix \"**/*.@(css|scss)\"",
-    "prepare": "husky"
-  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/byk04712/pnpm-monorepo-workspace#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/byk04712/pnpm-monorepo-workspace.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
   "bugs": {
     "url": "https://github.com/byk04712/pnpm-monorepo-workspace/issues"
   },
-  "homepage": "https://github.com/byk04712/pnpm-monorepo-workspace#readme",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "lint:es": "eslint packages/core/index.ts",
+    "lint:style": "stylelint --fix \"**/*.@(css|scss)\"",
+    "lint": "pnpm lint:es && pnpm lint:style",
+    "spellcheck": "cspell lint --dot --gitignore --color --cache --show-suggestions \"**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md)\"",
+    "prepare": "husky",
+    "commit": "cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^9.0.0",
+    "@commitlint/config-conventional": "^21.0.2",
     "@cspell/dict-lorem-ipsum": "^4.0.5",
     "@eslint/js": "^10.0.1",
+    "commitizen": "^4.3.2",
+    "commitlint": "^21.0.2",
     "cspell": "^10.0.1",
+    "cz-git": "^1.13.1",
     "eslint": "^10.5.0",
     "husky": "^9.1.7",
+    "lint-staged": "^17.0.7",
     "stylelint": "^17.13.0",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.61.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{css,scss}": [
+      "stylelint --fix"
+    ]
   }
 }

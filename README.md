@@ -24,3 +24,4 @@ monorepo 架构设计，为了在一个 git 仓库中管理多个项目，每个
     4. [husky](https://huskyjs.org/)
     5. [lint-staged](https://lint-staged.io/)
     6. [stylelint](https://stylelint.io/)
+    7. [cz-git](https://cz-git.qbb.sh/zh/)
