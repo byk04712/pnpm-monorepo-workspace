@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "检测 commit message 是否符合规范"
+
+pnpm lint:es

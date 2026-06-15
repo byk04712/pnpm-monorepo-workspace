@@ -1,0 +1,35 @@
+{
+  "name": "pnpm-monorepo-workspace",
+  "version": "1.0.0",
+  "description": "A template design by pnpm + monorepo + framework template.",
+  "main": "index.js",
+  "scripts": {
+    "lint:es": "eslint packages/core/index.ts",
+    "spellcheck": "cspell lint --dot --gitignore --color --cache --show-suggestions \"**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md)\"",
+    "lint:style": "stylelint --fix \"**/*.@(css|scss)\"",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byk04712/pnpm-monorepo-workspace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/byk04712/pnpm-monorepo-workspace/issues"
+  },
+  "homepage": "https://github.com/byk04712/pnpm-monorepo-workspace#readme",
+  "devDependencies": {
+    "@antfu/eslint-config": "^9.0.0",
+    "@cspell/dict-lorem-ipsum": "^4.0.5",
+    "@eslint/js": "^10.0.1",
+    "cspell": "^10.0.1",
+    "eslint": "^10.5.0",
+    "husky": "^9.1.7",
+    "stylelint": "^17.13.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.0"
+  }
+}
